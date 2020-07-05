@@ -1,3 +1,4 @@
+## game logic
 class Logic:
     def __init__(self,player_name):
         self.player=player_name
@@ -19,7 +20,7 @@ class Logic:
         if(nums["00"]==nums["01"]==nums["02"]):
             return f"{self.player} Won!!"
 
-        elif(nums["10"]==nums["12"]==nums["22"]):
+        elif(nums["10"]==nums["11"]==nums["12"]):
             return f"{self.player} Won!!"
         
         elif(nums["21"]==nums["22"]==nums["23"]):
@@ -34,9 +35,9 @@ class Logic:
 
 
 ##debugging
-ll=Logic("Shivansh")
-# ll.nums["00"]='x'
-# ll.nums["01"]='x'
-# ll.nums["02"]='x'
+# ll=Logic("Shivansh")
+# # ll.nums["00"]='x'
+# # ll.nums["01"]='x'
+# # ll.nums["02"]='x'
 
-print(ll.check())
+# print(ll.check())

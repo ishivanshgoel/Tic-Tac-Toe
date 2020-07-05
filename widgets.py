@@ -1,9 +1,12 @@
+## widgets for game
 import tkinter as tk
 from tkinter import ttk
 from logic import Logic
 
-log=Logic("Player")
+player1=Logic("Player1")
+player2=Logic("Player2")
 player=''
+
 
 def get_player_name(player_name):
     global player
@@ -24,14 +27,20 @@ class Widgets:
             player="Player1"
 
     def new_grid_button(self,frame,text,width,height,bg_color,row,column):
-        global log
+        global player1,player2
 
         ## when button is clicked
         def clicked(i,j):
+            ## debugging
             print(i,j)
             print(self.btn)
-            log.nums[f"{i}{j}"]="x"
-            print(log.nums[f"{i}{j}"])
+            if(player=="Player1"):
+                player1.nums[f"{i}{j}"]="x"
+                print(player1.check())
+            elif(player=="Player2"):
+                player2.nums[f"{i}{j}"]="o"
+                print(player2.check())
+            
             self.configure_button()
             
 
