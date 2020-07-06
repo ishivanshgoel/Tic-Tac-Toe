@@ -31,6 +31,7 @@ class Logic:
         
         elif(nums["02"]==nums["12"]==nums["21"]):
             return f"{self.player} Won!!"
+            
   ## even more logic
 
 
