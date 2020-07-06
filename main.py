@@ -15,7 +15,6 @@ def startPage():
             btn1=Widgets()
             btn1.new_grid_button(main_frame,f"{i},{j}",10,5,'#d93253',i,j)
     get_player_name(main_frame)
-
 ### front page of app
 window.title("Tik-Tac-Toe")
 window.geometry("600x600")
